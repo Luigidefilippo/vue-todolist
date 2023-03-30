@@ -20,4 +20,46 @@ header{
 }
 /* /HEADER*/
 
+/* MAIN */
+main.container{
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 1rem 0 ;
+  max-width: 720px;
+}
+ul{
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0 auto;
+}li {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.cross, .check {
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+}
+
+span {
+  display: block;
+}
+
+.text2 {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, .6);
+}
+
+.key-title{
+  cursor: pointer;
+}
+
+.d-none{
+  display: none;
+}
+
 
