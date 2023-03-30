@@ -26,8 +26,8 @@
           </div>
           <div class="ms_right-header">
             <label for="add-tasck">ADD A NEW TASK </label>
-            <input type="text" name="add-task" id="tasck-input" placeholder="Inserisci task" class="mb-1">
-            <button>Aggiungi</button>
+            <input  @keyup.enter="addNewTask" type="text" name="add-task" id="tasck-input" placeholder="Inserisci task" class="mb-1" v-model="newTask">
+            <button @click="addNewTask" >Aggiungi</button>
           </div>
         </div>
       </div>
@@ -39,10 +39,10 @@
       <div class="container">
           <div class="ms_task-container">
               <ul>
-                  <li>
+                  <li v-for="(task, index ) in tasks">
                       <div class="d-flex flex-wrap justify-content-between">
-                          <span class="key-title"></span>
-                          <span><i class="fa-sharp fa-solid fa-xmark cross"></i></span>
+                          <span class="key-title" @click="done(index)" :class="task.done ? 'text2' : ''">{{ task.title }}</span>
+                          <span @click="deleteTask(index)"><i class="fa-sharp fa-solid fa-xmark cross"></i></span>
                           <span class="line"><hr></span>  
                       </div>
                   </li>
